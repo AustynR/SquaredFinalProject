@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squared Contact Page</title>
+    <link rel="stylesheet" href="../stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script>
+        $(document).ready(function () {
+            $('.dropdown-btn').click(function () {
+                $('.dropdown-menu').toggle();
+            });
+
+            $(document).click(function (event) {
+                if (!$(event.target).hasClass('dropdown-btn')) {
+                    $('.dropdown-menu').hide();
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $('form').submit(function (event) {
+                alert('Thank you for filling out the survey!');
+            });
+        });
+        /*
+        function highlightOption(option) {
+            // Remove the highlighted class from all options
+            var options = document.getElementsByTagName("option");
+            for (var i = 0; i < options.length; i++) {
+                options[i].classList.remove("highlighted");
+            }
+
+            // Add the highlighted class to the selected option
+            option.classList.add("highlighted");
+        }
+
+        function highlightOption(option) {
+            // Remove the highlighted class from all options
+            var options = document.getElementsByTagName("option");
+            for (var i = 0; i < options.length; i++) {
+                options[i].classList.remove("highlighted");
+            }
+
+            // Add the highlighted class to the selected option
+            option.classList.add("highlighted");
+        }
+        */
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <a href="../index.html" class="logo">Squared</a>
+        <nav class="navbar">
+            <a href="../index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+    <main class="contact">
+        <div class="contact-content">
+            <h1>Contact Info</h1>
+            <p>
+                Call or Email during any of the hours listed below to get in touch with Squared Support! <br>
+                <br>
+            <table>
+                <tr>
+                    <th>Sunday</th>
+                    <td>Closed</td>
+                </tr>
+                <tr>
+                    <th>Monday</th>
+                    <td>9am - 5pm</td>
+                </tr>
+                <tr>
+                    <th>Tuesday</th>
+                    <td>9am - 5pm</td>
+                </tr>
+                <tr>
+                    <th>Wednesday</th>
+                    <td>9am - 5pm</td>
+                </tr>
+                <tr>
+                    <th>Thursday</th>
+                    <td>9am - 5pm</td>
+                </tr>
+                <tr>
+                    <th>Friday</th>
+                    <td>9am - 5pm</td>
+                </tr>
+                <tr>
+                    <th>Saturday</th>
+                    <td>9am - 5pm</td>
+                </tr>
+            </table>
+            <br>
+            <div>
+                <a href="#" id="phone"><i class='bx bxs-phone'></i></a>---(888)-888-8888<br>
+                <a href="#" id="gmail"><i class='bx bxl-gmail'></i></a>---SquaredChess@gmail.com
+            </div>
+
+            <p><small><em>Fake Contact info</em></small></p>
+        </div>
+
+        <button class="dropdown-btn">Play Chess</button>
+        <div class="dropdown-menu">
+            <a href="https://www.chess.com/home" target="_blank">ChessCom</a>
+            <a href="https://lichess.org/" target="_blank">Lichess</a>
+            <a href="https://chessly.com/" target="_blank">Chessly</a>
+        </div>
+
+        <!--
+            If the autofill feature is used then the background color 
+            does not change correctly        
+        -->
+        <div class="contact-content2">
+            <h1>Chess Survey</h1>
+            <form method="post">
+                First Name: <input type="text" name="firstname"><br>
+                Last Name: <input type="text" name="lastname"><br>
+                Online Chess Username: <input type="text" name="username" required><br>
+                What is your current rating?<br>
+                <select name="rating" size="4">
+                    <option style="cursor: pointer;" value="beginner" onclick="highlightOption(this)">below 1000
+                    </option>
+                    <option style="cursor: pointer;" value="intermediate" onclick="highlightOption(this)">1000-1800
+                    </option>
+                    <option style="cursor: pointer;" value="advanced" onclick="highlightOption(this)">1800-2300</option>
+                    <option style="cursor: pointer;" value="master" onclick="highlightOption(this)">2300+</option>
+                </select>
+                <br>
+                How long have you been playing?<br>
+                <select name="rating" size="4">
+                    <option style="cursor: pointer;" value="beginner" onclick="highlightOption(this)">Less than 1 year
+                    </option>
+                    <option style="cursor: pointer;" value="intermediate" onclick="highlightOption(this)">3+ years
+                    </option>
+                    <option style="cursor: pointer;" value="advanced" onclick="highlightOption(this)">5+ years</option>
+                    <option style="cursor: pointer;" value="master" onclick="highlightOption(this)">8+ years</option>
+                </select>
+                <br>
+                <input style="cursor: pointer;" type="submit" value="Submit!">
+                <input style="cursor: pointer;" type="reset">
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>
+            Squared &copy; 2023<br>
+            <small><em>This website is made for educational purposes and is not a real business</em></small>
+        </p>
+    </footer>
+</body>
+
+</html>
